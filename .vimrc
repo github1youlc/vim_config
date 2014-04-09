@@ -8,8 +8,7 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-" My bundles here:
-"
+" ------------------- My bundles here: -----------------------
 " original repos on GitHub
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdtree'
@@ -33,7 +32,7 @@ Bundle 'taglist.vim'
 
 filetype plugin indent on     " required!
 
-" ycm configuration
+" -------------------- ycm configurationi ----------------------
 nnoremap <leader>c<Esc> :YcmCompleter GotoDeclaration<CR>
 nnoremap <leader>f<Esc> :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>g<Esc> :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -42,22 +41,23 @@ let g:ycm_extra_conf_globlist='/home/youlc/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 nnoremap <F4> :YcmDiags<CR>
 
+" --------------------- clang_complete -------------------
 " let g:clang_library_path = '/home/youlc/.vim/bundle/YouCompleteMe/python/'
 let g:clang_complete_auto = 1
 let g:clang_complete_copen = 1
 
-" nerd tree config
+" ------------------ nerd tree config ---------------------
 let NERDTreeWinPos = 'left'
 map <silent> <F8> :NERDTree<CR>
 
-" taglist config
+" ------------------ taglist config ---------------------
 map <silent> <F9> :TlistToggle<CR>
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Auto_Open = 1
 let Tlist_Use_Right_Window = 1
 
-" general configuration
+" ------------------- general configuration --------------------
 set nu
 set cindent
 set noexpandtab
@@ -69,9 +69,12 @@ nnoremap <leader>l<Esc> :so $MYVIMRC<CR>
 
 " auto complete {} "" [] () ''
 inoremap { {<CR>}<ESC>kA<CR>
-inoremap " ""<Esc>i
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap ' ''<Esc>i
-""inoremap < <><Esc>i
+" inoremap " ""<Esc>i
+" inoremap ( ()<Esc>i
+" inoremap [ []<Esc>i
+" inoremap ' ''<Esc>i
+" inoremap < <><Esc>i
+
+nnoremap <F7> :make<CR>
+
 
