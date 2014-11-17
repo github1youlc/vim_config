@@ -1,8 +1,8 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
@@ -26,7 +26,7 @@ Bundle 'asins/vim-dict'
 "Bundle 'FuzzyFinder'
 "Bundle 'project.vim'
 Bundle 'taglist.vim'
-Bundle 'AutoComplPop'
+"Bundle 'AutoComplPop'
 Bundle 'jellybeans.vim'
 Bundle 'vividchalk.vim'
 Bundle 'CmdlineComplete'
@@ -37,7 +37,7 @@ Bundle 'kien/ctrlp.vim'
 "Bundle 'git://git.wincent.com/command-t.git'
 " Git repos on your local machine (i.e. when working on your own plugin)
 "Bundle 'file:///Users/gmarik/path/to/plugin'
-
+call vundle#end()
 filetype plugin indent on     " required!
 
 " -------------------- ycm configurationi ----------------------
@@ -45,7 +45,7 @@ nnoremap <leader>c<Esc> :YcmCompleter GotoDeclaration<CR>
 nnoremap <leader>f<Esc> :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>g<Esc> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " let g:ycm_extra_conf_globlist = '/home/youlc/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_extra_conf_globlist='/home/youlc/.ycm_extra_conf.py'
+let g:ycm_extra_conf_globlist=['/home/youlc/.ycm_extra_conf.py']
 let g:ycm_confirm_extra_conf = 0
 nnoremap <F4> :YcmDiags<CR>
 
@@ -113,10 +113,8 @@ set laststatus=2
 colorscheme jellybeans
 let g:jellybeans_use_lowcolor_black = 1
 
-let s:vimfile = '/home/users/youlingcong/.vim/'
-autocmd filetype * let &l:dict=s:vimfile.'bundle/vim-dict/dict/'.&ft.'.dict'
-autocmd filetype smarty let &l:dict=s:vimfile.'bundle/vim-dict/dict/smarty.dict,'.s:vimfile.'bundle/vim-dict/dict/javascript.dict,'.s:vimfile.'bundle/vim-dict/dict/php.dict'
 
+" ---------------------------------------------------------------------
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*py~     " MacOSX/Linux
@@ -132,6 +130,7 @@ let g:ctrlp_open_new_file = 'h'
 let g:ctrlp_max_files = 0
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_regexp = 1
+" .......................................................................
 
 
 
