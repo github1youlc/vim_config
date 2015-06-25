@@ -15,15 +15,17 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'asins/vim-dict'
 Bundle 'vim-scripts/Auto-Pairs'
+Bundle 'altercation/vim-colors-solarized'
 
 
 " vim-scripts repos
 Bundle 'taglist.vim'
-Bundle 'jellybeans.vim'
+" Bundle 'jellybeans.vim'
 Bundle 'vividchalk.vim'
 Bundle 'CmdlineComplete'
 Bundle 'kien/ctrlp.vim'
-
+Bundle 'xml.vim'
+Bundle 'conque_gdb.vmb'
 
 
 " non-GitHub repos
@@ -52,12 +54,6 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Auto_Open = 0
 let Tlist_Use_Right_Window = 1
 
-" ------------------- general configuration --------------------
-set nu
-set cindent
-set expandtab
-set shiftwidth=4
-set tabstop=4
 
 nnoremap <leader>l<Esc> :so $MYVIMRC<CR>
 
@@ -70,8 +66,8 @@ nmap <C-.> :bn<CR>
 nmap <C-,> :nN<CR>
 
 set encoding=utf-8
-set fileencodings=gbk,utf-8,gb18030,utf-16,big5
-set termencoding=gbk
+set fileencodings=utf-8,gbk,gb18030,utf-16,big5
+set termencoding=utf-8
 
 " airline configuration
 let g:airline#extensions#tabline#enabled = 1
@@ -83,8 +79,8 @@ let g:airline_inactive_collapse=0
 
 set t_Co=256
 set laststatus=2
-colorscheme jellybeans
-let g:jellybeans_use_lowcolor_black = 1
+" colorscheme jellybeans
+" let g:jellybeans_use_lowcolor_black = 1
 
 
 " ---------------------------------------------------------------------
@@ -106,4 +102,18 @@ let g:ctrlp_regexp = 1
 " .......................................................................
 
 
+" ------------------- general configuration --------------------
+set nu
+set cindent
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set hlsearch
+" set foldmethod=indent
+set wrap
+set linebreak
+set cursorcolumn
 
+syntax enable
+set background=dark
+colorscheme solarized
